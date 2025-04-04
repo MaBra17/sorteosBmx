@@ -39,6 +39,7 @@
       text-align: center;
       background: linear-gradient(45deg, #ff8c00, #e07b00);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-top: 20px;
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
@@ -151,17 +152,29 @@
     <img src="img/SteamDef.png" alt="Imagen del sorteo actual" id="sorteo-imagen" class="img-fluid rounded d-block mx-auto">
     <!-- Formulario de suscripción -->
     <section id="formulario-suscripcion" class="my-5">
-      <h2 class="section-heading">¡Participa Gratis!</h2>
-      <p class="section-description">Ingresa tu correo electrónico <b>yahoo.com</b> para unirte al sorteo:</p>
-      <form action="http://eepurl.com/jbGgFo" method="POST" class="d-flex justify-content-center">
-        <div class="input-group flex-column">
-          <input type="email" name="EMAIL" class="form-control mb-3" placeholder="Tu correo electrónico" required>
-          <p class="text-center small text-muted mt-2">
+        <h2 class="section-heading">¡Participa Gratis!</h2>
+        <p class="section-description">Ingresa tu correo electrónico <b>yahoo.com</b> para unirte al sorteo:</p>
+        <form action="https://gmail.us17.list-manage.com/subscribe/post?u=e975174c015625c2af6630b10&amp;id=61c7e39d21&amp;f_id=00ebd2e0f0" 
+            method="post" 
+            id="mc-embedded-subscribe-form" 
+            name="mc-embedded-subscribe-form" 
+            class="d-flex justify-content-center validate" 
+            target="_blank">
+        <div class="input-group flex-column" style="max-width:500px; width:100%;">
+            <input type="email" name="EMAIL" class="form-control mb-3" placeholder="Tu correo electrónico" required>
+            
+            <p class="text-center small text-muted mt-2">
             * El sorteo es válido únicamente para participantes dentro de Argentina.
-          </p>
-          <button type="submit" class="btn-custom mt-2">Suscribirse al sorteo</button>
+            </p>
+            
+            <!-- Campo oculto para evitar bot submissions -->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_e975174c015625c2af6630b10_61c7e39d21" tabindex="-1" value="">
+            </div>
+            
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn-custom mt-2">Suscribirse al sorteo</button>
         </div>
-      </form>
+        </form>
     </section>
 
     <!-- Footer -->
@@ -178,6 +191,16 @@
 
   <!-- Scripts de Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script type="text/javascript">
+        (function($) {
+            window.fnames = new Array(); 
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL';
+            ftypes[0] = 'email';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+        </script>
 </body>
 
 </html>

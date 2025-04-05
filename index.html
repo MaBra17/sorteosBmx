@@ -217,14 +217,14 @@
     </script>
    <script>
         document.getElementById("mc-embedded-subscribe-form").addEventListener("submit", function(e) {
-          var email = document.getElementById("emailInput").value;
-          if (!email.toLowerCase().endsWith("@yahoo.com")) {
-            e.preventDefault(); // Evita que se envíe el formulario
+        var email = document.getElementById("emailInput").value;
+        if (!email.toLowerCase().endsWith("@yahoo.com")) {
+            e.preventDefault();           // Evita el envío
+            e.stopImmediatePropagation(); // Impide que se ejecuten otros manejadores del evento
             alert("Solo se permiten direcciones de correo con dominio @yahoo.com");
             document.getElementById("emailInput").focus();
-          }
+        }
         });
     </script>
 </body>
-
 </html>
